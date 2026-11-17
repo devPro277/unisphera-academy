@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 4%;
+    --foreground: 210 33% 93%;
+
+    --card: 225 15% 8%;
+    --card-foreground: 210 33% 93%;
+
+    --popover: 225 15% 8%;
+    --popover-foreground: 210 33% 93%;
+
+    --primary: 27 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 13%;
+    --secondary-foreground: 210 33% 93%;
+
+    --muted: 220 10% 13%;
+    --muted-foreground: 215 8% 65%;
+
+    --accent: 27 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 13%;
+    --input: 220 12% 13%;
+    --ring: 27 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 14% 4%;
+    --sidebar-foreground: 210 33% 93%;
+    --sidebar-primary: 27 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 10% 13%;
+    --sidebar-accent-foreground: 210 33% 93%;
+    --sidebar-border: 220 12% 13%;
+    --sidebar-ring: 27 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Sora', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(255, 122, 0, 0.15);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass {
+    background: rgba(8, 9, 10, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .section-spacing {
+    @apply py-[120px];
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, #FF7A00, #FF9333);
+  }
+
+  .hero-glow {
+    background: radial-gradient(circle at 50% 20%, rgba(255, 122, 0, 0.15), transparent 60%);
+  }
+}
